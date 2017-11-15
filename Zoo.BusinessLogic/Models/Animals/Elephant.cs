@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace Zoo.BusinessLogic.Models.Animals
 {
-    public class Elephant : AnimalThatCanBeGroomed
+    public class Elephant : Animal
     {
-        public Elephant(DateTime dateOfBirth) : base(dateOfBirth)
+        public Elephant(DateTime dateOfBirth) : base(dateOfBirth, true)
         {
 
         }

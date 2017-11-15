@@ -2,41 +2,53 @@
 
 namespace Zoo.BusinessLogic.Models.Animals
 {
-  public abstract class Animal
-  {
-    private readonly DateTime dateOfBirth;
-    private DateTime lastFed;
-
-    protected Animal(DateTime dateOfBirth)
+    public abstract class Animal
     {
-      this.dateOfBirth = dateOfBirth;
-    }
+        private readonly DateTime dateOfBirth;
+        private DateTime lastFed;
+        private DateTime lastGroomed;
+        private bool CanBeGroomed;
 
-    public TimeSpan Age
-    {
-      get { return DateTime.Today - dateOfBirth; }
-    }
+        protected Animal(DateTime dateOfBirth, bool canBeGroomed)
+        {
+            this.dateOfBirth = dateOfBirth;
+            this.CanBeGroomed = canBeGroomed;
+        }
 
-    public DateTime LastFed
-    {
-      get { return lastFed; }
-    }
+        public TimeSpan Age
+        {
+            get { return DateTime.Today - dateOfBirth; }
+        }
 
-    public virtual void Feed()
-    {
-      lastFed = DateTime.Now;
-    }
+        public DateTime LastFed
+        {
+            get { return lastFed; }
+        }
+        public virtual void Groom()
+        {
+            if (CanBeGroomed == true)
+            {
+                lastGroomed = DateTime.Now;
+            }
 
-    public bool IsHungry()
-    {
-      // Obviously an animal wouldn't get hungry in a matter of seconds. 
-      // But it means we can see activity in real time when we run the code...
-      return (DateTime.Now - lastFed).TotalSeconds > Config.FeedingFrequency;
-    }
+        }
 
-    public override string ToString()
-    {
-      return $"{GetType().Name}, last fed {lastFed}";
+        public virtual void Feed()
+        {
+            lastFed = DateTime.Now;
+        }
+
+        public bool IsHungry()
+        {
+            // Obviously an animal wouldn't get hungry in a matter of seconds. 
+            // But it means we can see activity in real time when we run the code...
+            return (DateTime.Now - lastFed).TotalSeconds > Config.FeedingFrequency;
+        }
+
+        public override string ToString()
+        {
+            return $"{GetType().Name}, last fed {lastFed}\n{GetType().Name}, last groomed {lastGroomed}"
+            ;
+        }
     }
-  }
 }

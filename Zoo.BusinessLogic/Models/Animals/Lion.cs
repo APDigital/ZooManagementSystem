@@ -8,7 +8,7 @@ namespace Zoo.BusinessLogic.Models.Animals
 {
   public class Lion : Animal
   {
-    public Lion(DateTime dateOfBirth) : base(dateOfBirth)
+    public Lion(DateTime dateOfBirth) : base(dateOfBirth,false)
     {
     }
   }

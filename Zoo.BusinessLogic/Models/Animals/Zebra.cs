@@ -2,9 +2,9 @@
 
 namespace Zoo.BusinessLogic.Models.Animals
 {
-  public class Zebra : AnimalThatCanBeGroomed
+  public class Zebra : Animal
   {
-    public Zebra(DateTime dateOfBirth) : base(dateOfBirth)
+    public Zebra(DateTime dateOfBirth) : base(dateOfBirth,true)
     {
     }
   }

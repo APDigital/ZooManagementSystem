@@ -2,9 +2,9 @@
 
 namespace Zoo.BusinessLogic.Models.Animals
 {
-  public class Rabbit : AnimalThatCanBeGroomed
+  public class Rabbit : Animal
   {
-    public Rabbit(DateTime dateOfBirth) : base(dateOfBirth)
+    public Rabbit(DateTime dateOfBirth) : base(dateOfBirth, true)
     {
     }
     public override void Feed()
