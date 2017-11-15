@@ -30,6 +30,7 @@ namespace Zoo.BusinessLogic.Models.Animals
             {
                 lastGroomed = DateTime.Now;
             }
+            else { }
 
         }
 
@@ -47,8 +48,17 @@ namespace Zoo.BusinessLogic.Models.Animals
 
         public override string ToString()
         {
-            return $"{GetType().Name}, last fed {lastFed}\n{GetType().Name}, last groomed {lastGroomed}"
-            ;
+            string result;
+            if (CanBeGroomed == true)
+            {
+                result = $"{GetType().Name}, last fed {lastFed}\n{GetType().Name}, last groomed {lastGroomed}";
+            }
+            else
+            {
+                result = $"{GetType().Name}, last fed {lastFed}";
+            }
+            return result;
+
         }
     }
 }
