@@ -7,24 +7,24 @@ namespace Zoo.BusinessLogic.Services
 {
   public class FeedingScheduler
   {
-    private static FeedingScheduler instance;
+    //private static FeedingScheduler instance;
 
-    public static FeedingScheduler Instance
-    {
-      get
-      {
-        if (instance == null)
-        {
-          instance = new FeedingScheduler();
-        }
+    //public static FeedingScheduler Instance
+    //{
+    //  get
+    //  {
+    //    if (instance == null)
+    //    {
+    //      instance = new FeedingScheduler();
+    //    }
 
-        return instance;
-      }
-    }
+    //    return instance;
+    //  }
+    //}
 
-    private FeedingScheduler()
-    {
-    }
+    //private FeedingScheduler()
+    //{
+    //}
 
     public void AssignFeedingJobs(IEnumerable<Keeper> keepers, IEnumerable<Animal> animals)
     {

@@ -32,8 +32,8 @@ namespace Zoo.ConsoleApp
         new Keeper(lions),
         new Keeper(otherAnimals)
       };
-
-            var feedingScheduler = FeedingScheduler.Instance;
+            FeedingScheduler feedingScheduler = new FeedingScheduler();
+            //var feedingScheduler = FeedingScheduler.Instance;
             var groomingScheduler = GroomingScheduler.Instance;
 
             while (true)
