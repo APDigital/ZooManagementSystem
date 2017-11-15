@@ -30,7 +30,6 @@ namespace Zoo.BusinessLogic.Models.Animals
             {
                 lastGroomed = DateTime.Now;
             }
-            else { }
 
         }
 
