@@ -45,6 +45,7 @@
     <Compile Include="Models\Animals\AnimalThatCanBeGroomed.cs" />
     <Compile Include="Models\Animals\Elephant.cs" />
     <Compile Include="Models\Animals\GuineaFowl.cs" />
+    <Compile Include="Models\Animals\IAnimal.cs" />
     <Compile Include="Models\Animals\Lion.cs" />
     <Compile Include="Models\Animals\Zebra.cs" />
     <Compile Include="Models\Animals\Rabbit.cs" />
